@@ -1,26 +1,26 @@
 'use strict';
 
 class StringBuilder {
-  _value = '';
+  #value = '';
 
   constructor(initialValue) {
-    this._value = initialValue;
+    this.#value = initialValue;
   }
 
   padStart(str) {
-    return this._value = str + this._value;
+    this.#value = str + this.#value;
   }
 
   padEnd(str) {
-    return this._value = this._value + str;
+    this.#value = this.#value + str;
   }
 
-    padBoth(str) {    
-      return this._value = str + this._value + str;
+  padBoth(str) {    
+    this.#value = str + this.#value + str;
   }
 
   getValue() { 
-    return this._value;
+    return this.#value;
   }
 }
 

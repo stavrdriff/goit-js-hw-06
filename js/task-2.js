@@ -1,20 +1,22 @@
 'use strict';
 
 class Storage {
+  #items = [];
+
   constructor(items) {
-    this.items = items;
+    this.#items = items;
   }
 
   addItem(itemToAdd) {
-    return this.items.push(itemToAdd);
+    this.#items.push(itemToAdd);
   }
 
   removeItem(itemToRemove) {
-    return this.items = this.items.filter(el => el !== itemToRemove);
+    this.#items = this.#items.filter(el => el !== itemToRemove);
   }
 
   getItems() {
-    return this.items;
+    return this.#items;
   }
 }
 
